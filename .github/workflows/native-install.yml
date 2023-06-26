@@ -104,6 +104,7 @@ jobs:
          fi
          
       - name: Test Container
+        if: ${{ env.keepgoing == 'true' }}
         run: |
           echo "Present working directory: $PWD"
           ls
