@@ -105,6 +105,8 @@ jobs:
          
       - name: Test Container
         run: |
+          echo "Present working directory: $PWD"
+          ls $PWD
           ./run_test.sh
         shell: bash
         
