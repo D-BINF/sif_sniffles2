@@ -102,7 +102,11 @@ jobs:
            echo "Present working directory: $PWD"
            ls
          fi
-
+         
+      - name: Test Container
+        run: run_test.sh
+        shell: bash
+        
       - name: Login and Deploy Container
         if: (github.event_name != 'pull_request')
         env:
