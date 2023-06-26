@@ -106,7 +106,8 @@ jobs:
       - name: Test Container
         run: |
           echo "Present working directory: $PWD"
-          ls $PWD
+          ls "$PWD"
+          ls /home/runner/work/sif_sniffles2/sif_sniffles2
           ./run_test.sh
         shell: bash
         
